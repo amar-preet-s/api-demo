@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<title>Your first Spring application</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+input[type=text],input[type=url]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 6px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.header{
+
+            height:8%;
+            text-align:center;
+            padding:auto;
+        }
+
+.heading{
+            font-size:40px;
+            font-style:bold;
+            }
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<div class="header">
+    <p class="heading">Assignment</p>
+</div>
+<div><hr style="width:100%;text-align:left;margin-left:0"></div>
+<div >
+    <form action="/api/shorten" method="get">
+        <label for="url">Enter your URL</label>
+        <input type="url" id="url" name="longURL" onfocus = "this.value=''">
+
+
+        <input type="submit" value="Encode">
+    </form>
+</div>
+<div><hr style="width:100%;text-align:left;margin-left:0"></div>
+<div>
+    <form action="/api/expand" method="get">
+        <label for="code">Enter your CODE</label>
+        <input type="text" id="code" name="shortURL" onfocus = "this.value=''">
+
+
+        <input type="submit" value="Decode" >
+    </form>
+</div>
+<div><hr style="width:100%;text-align:left;margin-left:0"></div>
+<div>
+    <form action="/api/analytics" method="get">
+        <input type="submit" value="Most Accessed URLs" >
+    </form>
+</div>
+
+</body>
+</html>
